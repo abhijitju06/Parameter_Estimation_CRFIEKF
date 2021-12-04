@@ -1,0 +1,81 @@
+[System]
+Name='fuzzy_rule_hk_atp_glc'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=2
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='hk'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2394 3.125 6.939e-18]
+MF2='mid':'gbellmf',[0.2394 3.125 0.5]
+MF3='high':'gbellmf',[0.2476 3.129 1]
+
+[Input2]
+Name='atp'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2342 3.125 1.388e-17]
+MF2='mid':'gbellmf',[0.2556 3.124 0.503]
+MF3='high':'gbellmf',[0.2342 3.125 1]
+
+[Input3]
+Name='glc'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2367 3.125 0]
+MF2='mid':'gbellmf',[0.2421 3.125 0.5]
+MF3='high':'gbellmf',[0.2419 3.123 0.9998]
+
+[Output1]
+Name='g6p'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2342 3.278 1.388e-17]
+MF2='mid':'gbellmf',[0.25 3.125 0.5]
+MF3='high':'gbellmf',[0.2391 3.126 0.9971]
+
+[Output2]
+Name='adp'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2236 3.125 -1.388e-17]
+MF2='mid':'gbellmf',[0.25 3.125 0.5]
+MF3='high':'gbellmf',[0.2419 3.123 0.9998]
+
+[Rules]
+1 1 1, 1 3 (1) : 1
+1 1 2, 1 3 (1) : 1
+1 1 3, 2 3 (1) : 1
+1 2 1, 1 2 (1) : 1
+1 2 2, 2 2 (1) : 1
+1 2 3, 2 2 (1) : 1
+1 3 1, 1 1 (1) : 1
+1 3 2, 2 1 (1) : 1
+1 3 3, 2 1 (1) : 1
+2 1 1, 1 3 (1) : 1
+2 1 2, 2 3 (1) : 1
+2 1 3, 2 3 (1) : 1
+2 2 1, 1 2 (1) : 1
+2 2 2, 2 2 (1) : 1
+2 2 3, 2 2 (1) : 1
+2 3 1, 1 1 (1) : 1
+2 3 2, 2 1 (1) : 1
+2 3 3, 2 1 (1) : 1
+3 1 1, 1 3 (1) : 1
+3 1 2, 2 3 (1) : 1
+3 1 3, 2 3 (1) : 1
+3 2 1, 1 2 (1) : 1
+3 2 2, 2 2 (1) : 1
+3 2 3, 2 2 (1) : 1
+3 3 1, 1 1 (1) : 1
+3 3 2, 2 1 (1) : 1
+3 3 3, 3 1 (1) : 1

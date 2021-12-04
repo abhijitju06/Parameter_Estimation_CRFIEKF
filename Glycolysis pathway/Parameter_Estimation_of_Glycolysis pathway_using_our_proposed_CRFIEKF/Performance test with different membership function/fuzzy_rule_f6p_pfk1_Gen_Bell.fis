@@ -1,0 +1,73 @@
+[System]
+Name='fuzzy_rule_f6p_pfk1'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='f6p'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2367 3.125 0]
+MF2='mid':'gbellmf',[0.25 3.125 0.5]
+MF3='high':'gbellmf',[0.2394 3.126 1]
+
+[Input2]
+Name='pfk1'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2367 3.125 0]
+MF2='mid':'gbellmf',[0.2474 3.125 0.5]
+MF3='high':'gbellmf',[0.2367 3.124 0.9999]
+
+[Input3]
+Name='atp'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2342 3.125 1.388e-17]
+MF2='mid':'gbellmf',[0.25 3.125 0.5]
+MF3='high':'gbellmf',[0.2419 3.123 0.9998]
+
+[Output1]
+Name='f16bp'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gbellmf',[0.2447 3.125 2.082e-17]
+MF2='mid':'gbellmf',[0.2394 3.125 0.5]
+MF3='high':'gbellmf',[0.2447 3.125 1]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 1 (1) : 1
+1 2 3, 1 (1) : 1
+1 3 1, 1 (1) : 1
+1 3 2, 1 (1) : 1
+1 3 3, 1 (1) : 1
+2 1 1, 1 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 3, 1 (1) : 1
+2 2 1, 2 (1) : 1
+2 2 2, 2 (1) : 1
+2 2 3, 2 (1) : 1
+2 3 1, 1 (1) : 1
+2 3 2, 2 (1) : 1
+2 3 3, 2 (1) : 1
+3 1 1, 2 (1) : 1
+3 1 2, 2 (1) : 1
+3 1 3, 2 (1) : 1
+3 2 1, 2 (1) : 1
+3 2 2, 2 (1) : 1
+3 2 3, 3 (1) : 1
+3 3 1, 2 (1) : 1
+3 3 2, 3 (1) : 1
+3 3 3, 3 (1) : 1

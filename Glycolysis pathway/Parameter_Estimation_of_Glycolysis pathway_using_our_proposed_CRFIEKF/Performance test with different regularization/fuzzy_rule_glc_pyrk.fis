@@ -1,0 +1,47 @@
+[System]
+Name='fuzzy_rule_glc_pyrk'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='glocose'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.178627204028829 6.94e-18]
+MF2='mid':'gaussmf',[0.234799280767455 0.5]
+MF3='high':'gaussmf',[0.17 0.979190476190476]
+
+[Input2]
+Name='pyrk'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.189861619376555 6.94e-18]
+MF2='mid':'gaussmf',[0.203342917793825 0.5]
+MF3='high':'gaussmf',[0.203342917793825 1]
+
+[Output1]
+Name='pyr'
+Range=[0 1]
+NumMFs=3
+MF1='low':'gaussmf',[0.20109603472428 6.94e-18]
+MF2='mid':'gaussmf',[0.20558980086337 0.5]
+MF3='high':'gaussmf',[0.207836683932915 1]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+2 3, 2 (1) : 1
+3 1, 1 (1) : 1
+3 2, 2 (1) : 1
+3 3, 3 (1) : 1
